@@ -15,47 +15,64 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return;
+  return 'Hello, Your Name!'
 }
 // Remember to call the function to test
-
+console.log(helloName(name));
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
+function addNumbers(firstNumber, secondNumber) {
   // return firstNumber + secondNumber;
+  let answer = firstNumber + secondNumber;
+  return answer;
 }
-
+console.log(addNumbers(10, 2));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree(num0, num1, num2) {
+  let answer = num0 * num1 * num2
+  return answer
 }
-
+console.log(multiplyThree(2, 3, 4))
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
+let number = 1
 function isPositive(number) {
   if (number > 0) {
-    return;
-  }
-  return;
+    return true;
+  } else 
+  return false;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-
+console.log('Is the number positive?', isPositive(number))
+console.log('Is the number positive?', isPositive(number))
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
+let array = [1, 2, 3]
 function getLast(array) {
-
+  if (array.length > 0) {
+    return array[array.length - 1];
+  } else
+  return 'undefined'
 }
+console.log(getLast(array))
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
-//    DO NOT use Array.includes, Array.indexOf, or Array.find 
+//    DO NOT use Array.includes, Array.indexOf, or Array.find
+let value = 4;
 function find(value, array) {
-
+  for (let i = 0; i < array.length; i++){
+    if (array[i] === value) {
+      return true;
+    }   
+  }  
+  return false;
 }
+console.log(find(value, array))
 
 // ----------------------
 // Stretch Goals
